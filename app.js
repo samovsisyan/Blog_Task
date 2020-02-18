@@ -34,8 +34,26 @@ app.use(function(err, req, res, next) {
   res.locals.error = req.app.get('env') === 'development' ? err : {};
 
   // render the error page
-  res.status(err.status || 500);
-  res.render('error');
+    res.status(err.status || 500);
+    res.json({
+        status: 'error',
+        message: err.message,
+        errors: err.errors,
+    });
 });
+
+
+// allowOrigin
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", '*');
+  res.header("Access-Control-Allow-Headers",
+      "Origin, X-Requested-With, Accept, Content-Type, Authorization");
+
+  if (req.method === "OPTIONS") {
+    res.header("Access-Control-Allow-Methods", "POST, PATCH, PUT, GET, DELETE, OPTIONS");
+    return res.status(200).json({});
+  }
+});
+
 
 module.exports = app;
