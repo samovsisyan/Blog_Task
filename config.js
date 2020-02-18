@@ -4,6 +4,6 @@ module.exports = {
         port: 3306,
         user: 'root',
         password: 'root',
-        database: 'blog_task'
+        database:'blog_task',
     }
 };

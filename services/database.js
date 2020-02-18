@@ -1,16 +1,23 @@
-const sequelize = require('sequelize');
+const Sequelize = require('sequelize');
 const config = require('../config');
 
-const {database} = config.mysql;
+const {database, user, password, host} = config.mysql;
 
+const sequelize = new Sequelize( database, user, password, {
+        host,
+        dialect: 'mysql',
+        logging: true,
+        freezeTableName: true,
+        operatorsAliases: false,
+        timestamps: false,
 
-const sequelize = new sequelize( database, {
-    dialect: 'mysql',
-    timestamps: false,
-    operatorsAliases: false,
-});
+    }
+);
 
 module.exports = sequelize;
+
+
+
 
 
 

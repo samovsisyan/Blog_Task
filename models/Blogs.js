@@ -1,11 +1,11 @@
 const Sequelize = require('sequelize');
 const sequelize = require('../services/database');
 
-class Blog extends Sequelize.Model{
+class Blogs extends Sequelize.Model{
 
 }
 
-Blog.init({
+Blogs.init({
     id: {
         type: Sequelize.BIGINT,
         primaryKey: true,
@@ -48,6 +48,6 @@ Blog.init({
     timestamps: false
 });
 
-Blog.sync();
+Blogs.sync();
 
-module.exports = Blog;
+module.exports = Blogs;
