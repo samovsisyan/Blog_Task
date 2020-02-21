@@ -7,6 +7,6 @@ module.exports = {
         database:'blog_task',
     },
 
-    secretKey: 'W184tvss89288Yssdsd8sd1',
+    secret: 'W184tvss89288Yssdsd8sd1',
 
 };

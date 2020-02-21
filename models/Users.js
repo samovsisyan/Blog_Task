@@ -15,7 +15,7 @@ Users.init({
     username: {
         type: Sequelize.STRING,
         allowNull: false,
-        unique: 'username'
+        // unique: 'username'
     },
     password: {
         type: Sequelize.STRING,
@@ -24,7 +24,7 @@ Users.init({
     email: {
         type: Sequelize.STRING,
         allowNull: false,
-        unique: 'email'
+        // unique: 'email'
 
     },
     role: {
