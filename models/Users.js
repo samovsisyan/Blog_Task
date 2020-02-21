@@ -23,7 +23,7 @@ Users.init({
     },
     email: {
         type: Sequelize.STRING,
-        allowNull: true,
+        allowNull: false,
         unique: 'email'
 
     },

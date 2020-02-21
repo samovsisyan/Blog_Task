@@ -5,5 +5,8 @@ module.exports = {
         user: 'root',
         password: 'root',
         database:'blog_task',
-    }
+    },
+
+    secretKey: 'W184tvss89288Yssdsd8sd1',
+
 };
